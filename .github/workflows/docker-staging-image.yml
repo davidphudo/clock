@@ -39,6 +39,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.PAT }}
-          repository: ${{ github.actor }}/argocd-pollens
+          repository: ${{ github.actor }}/argocd-example
           event-type: clock-staging
           client-payload: '{"image": "${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:${{ github.ref_name }}"}'
