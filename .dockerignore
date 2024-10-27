@@ -1,0 +1,4 @@
+.github
+.env
+/node_modules
+/lib
