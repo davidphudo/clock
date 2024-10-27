@@ -8,8 +8,7 @@
     "start": "ts-node ./src/index.ts",
     "dev": "nodemon ./src/index.ts",
     "build": "tsc",
-    "lint": "tslint -c tslint.json src/**/*.ts",
-    "prepublish": "npm run build"
+    "lint": "tslint -c tslint.json src/**/*.ts"
   },
   "author": "",
   "license": "ISC",
