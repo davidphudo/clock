@@ -1,6 +1,7 @@
-FROM node:23-alpine3.19
+FROM node:current-alpine
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
+USER 1000:1000
 CMD [ "npm", "start"]
