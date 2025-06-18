@@ -32,10 +32,12 @@ jobs:
         with:
           context: .
           sbom: true
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           provenance: mode=max
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:${{ github.ref_name }}
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:${{ github.ref_name }}
+            ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
       - 
         name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
